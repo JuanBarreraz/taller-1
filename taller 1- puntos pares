@@ -1,0 +1,210 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "2 punto del taller"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "El tercer número es el mayor.\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = float(input(\"Ingrese el primer número: \"))\n",
+    "num2 = float(input(\"Ingrese el segundo número: \"))\n",
+    "num3 = float(input(\"Ingrese el tercer número: \"))\n",
+    "\n",
+    "if num1 > num2 and num1 > num3:\n",
+    "    print(\"El primer número es el mayor.\")\n",
+    "elif num2 > num1 and num2 > num3:\n",
+    "    print(\"El segundo número es el mayor.\")\n",
+    "else:\n",
+    "    print(\"El tercer número es el mayor.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "punto 4 del taller"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "El número 2.0 no es múltiplo de 4.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "def es_multiplo():\n",
+    "    num1 = float(input(\"Ingrese el primer número: \"))\n",
+    "    num2 = float(input(\"Ingrese el segundo número: \"))\n",
+    "\n",
+    "    if num1 % num2 == 0:\n",
+    "        print(f\"El número {num1} es múltiplo de {num2}\")\n",
+    "    else:\n",
+    "        print(f\"El número {num1} no es múltiplo de {num2}\")\n",
+    "\n",
+    "es_multiplo()\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "punto 6 del taller"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "La letra w es una consonante.\n"
+     ]
+    }
+   ],
+   "source": [
+    "def identificar_letra():\n",
+    "    letra = input(\"Ingrese una letra: \")\n",
+    "\n",
+    "    if letra.lower() in 'aeiou':\n",
+    "        print(f\"La letra {letra} es una vocal.\")\n",
+    "    else:\n",
+    "        print(f\"La letra {letra} es una consonante.\")\n",
+    "\n",
+    "identificar_letra()\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "punto 8 del taller\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "La frecuencia ingresada se encuentra en la banda de radio\n"
+     ]
+    }
+   ],
+   "source": [
+    "def espectro(frecuencia):\n",
+    "    if frecuencia < 3 * 10**9:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda de radio\"\n",
+    "    elif frecuencia < 3 * 10**12:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda de microondas\"\n",
+    "    elif frecuencia < 4.3 * 10**14:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda infrarroja\"\n",
+    "    elif frecuencia < 7.5 * 10**14:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda visible\"\n",
+    "    elif frecuencia < 3 * 10**17:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda ultravioleta\"\n",
+    "    elif frecuencia < 3 * 10**19:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda de rayos X\"\n",
+    "    else:\n",
+    "        return \"La frecuencia ingresada se encuentra en la banda de rayos gamma\"\n",
+    "\n",
+    "frec = float(input(\"Ingresa la frecuencia de la onda en Hz: \"))\n",
+    "print(espectro(frec))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "punto 10 del taller"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Tiempo que le tomaría a la luz recorrer la distancia: 7.671974189557497e-05 segundos\n",
+      "Tiempo que le tomaría al sonido recorrer la distancia: 67.05539358600583 segundos\n",
+      "Tiempo que le tomaría al vehículo comercial más veloz recorrer la distancia: 261.9341368510961 segundos\n",
+      "Tiempo que le tomaría a Usain Bolt recorrer la distancia: 1885.2459016393443 segundos\n"
+     ]
+    }
+   ],
+   "source": [
+    "def calcular_tiempo(distancia):\n",
+    "    # Velocidades en m/s\n",
+    "    velocidad_luz = 299792458  # Fuente: [^1^][1]\n",
+    "    velocidad_sonido = 343  # Fuente: [^2^][7]\n",
+    "    velocidad_vehiculo = 316.11 * 1000 / 3600  # Fuente: [^3^][15]\n",
+    "    velocidad_bolt = 12.2  # Fuente: [^4^][19]\n",
+    "\n",
+    "    tiempo_luz = distancia / velocidad_luz\n",
+    "    tiempo_sonido = distancia / velocidad_sonido\n",
+    "    tiempo_vehiculo = distancia / velocidad_vehiculo\n",
+    "    tiempo_bolt = distancia / velocidad_bolt\n",
+    "\n",
+    "    print(f\"Tiempo que le tomaría a la luz recorrer la distancia: {tiempo_luz} segundos\")\n",
+    "    print(f\"Tiempo que le tomaría al sonido recorrer la distancia: {tiempo_sonido} segundos\")\n",
+    "    print(f\"Tiempo que le tomaría al vehículo comercial más veloz recorrer la distancia: {tiempo_vehiculo} segundos\")\n",
+    "    print(f\"Tiempo que le tomaría a Usain Bolt recorrer la distancia: {tiempo_bolt} segundos\")\n",
+    "\n",
+    "distancia = float(input(\"Ingrese la distancia en metros: \"))\n",
+    "calcular_tiempo(distancia)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  },
+  "orig_nbformat": 4
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
