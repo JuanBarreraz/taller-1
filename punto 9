@@ -1,0 +1,48 @@
+# Definir el diccionario con todos los países de América y sus ciudades capitales correspondientes
+paises = {
+    "antigua y barbuda": "Saint John's",
+    "argentina": "Buenos Aires",
+    "bahamas": "Nassau",
+    "barbados": "Bridgetown",
+    "belice": "Belmopan",
+    "bolivia": "La Paz (administrative); Sucre (judicial)",
+    "brasil": "Brasilia",
+    "canadá": "Ottawa",
+    "chile": "Santiago",
+    "colombia": "Bogotá",
+    "costa rica": "San José",
+    "cuba": "La Habana",
+    "dominica": "Roseau",
+    "ecuador": "Quito",
+    "el salvador": "San Salvador",
+    "estados unidos": "Washington D.C.",
+    "granada": "Saint George's",
+    "guatemala": "Ciudad de Guatemala",
+    "Guyana": "Georgetown",
+    "haití": "Puerto Príncipe",
+    "honduras": "Tegucigalpa",
+    "jamaica": "Kingston",
+    "méxico": "Ciudad de México",
+    "nicaragua": "Managua",
+    "panamá": "Ciudad de Panamá",
+    "paraguay": "Asunción",
+    "perú": "Lima",
+    "república dominicana": "Santo Domingo",
+    "san cristóbal y nieves": "Basseterre",
+    "san vicente y las granadinas": "Kingstown",
+    "santa lucía": "Castries",
+    "surinam": "Paramaribo",
+    "trinidad y tobago": "Puerto España",
+    "uruguay": "Montevideo",
+    "venezuela": "Caracas"
+}
+
+# Pedir al usuario que ingrese el nombre del país en minúsculas
+pais = input("Ingrese el nombre de un país de América (en minúsculas): ")
+
+# Buscar la ciudad capital correspondiente en el diccionario
+if pais in paises:
+    capital = paises[pais]
+    print("La ciudad capital de", pais.capitalize(), "es", capital)
+else:
+    print("País no identificado")
