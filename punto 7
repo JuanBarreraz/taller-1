@@ -1,0 +1,40 @@
+# Pedir los 5 números
+numeros = []
+for i in range(5):
+    numero = float(input("Ingrese un número real: "))
+    numeros.append(numero)
+
+# Promedio
+promedio = sum(numeros) / len(numeros)
+print("El promedio es:", promedio)
+
+# Mediana
+numeros_ordenados = sorted(numeros)
+if len(numeros_ordenados) % 2 == 0:
+    mediana = (numeros_ordenados[len(numeros_ordenados)//2 - 1] + numeros_ordenados[len(numeros_ordenados)//2]) / 2
+else:
+    mediana = numeros_ordenados[len(numeros_ordenados)//2]
+print("La mediana es:", mediana)
+
+# Promedio multiplicativo
+producto = 1
+for num in numeros:
+    producto *= num
+promedio_multiplicativo = producto ** (1/len(numeros))
+print("El promedio multiplicativo es:", promedio_multiplicativo)
+
+# Orden ascendente
+numeros_ascendente = sorted(numeros)
+print("Los números ordenados de forma ascendente son:", numeros_ascendente)
+
+# Orden descendente
+numeros_descendente = sorted(numeros, reverse=True)
+print("Los números ordenados de forma descendente son:", numeros_descendente)
+
+# Potencia del mayor número elevada al menor número
+potencia = max(numeros) ** min(numeros)
+print("La potencia del mayor número elevada al menor número es:", potencia)
+
+# Raíz cúbica del menor número
+raiz_cubica = min(numeros) ** (1/3)
+print("La raíz cúbica del menor número es:", raiz_cubica)
